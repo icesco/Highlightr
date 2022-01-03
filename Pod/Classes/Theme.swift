@@ -23,8 +23,8 @@ import Foundation
 
 #endif
 
-private typealias RPThemeDict = [String: [AnyHashable: AnyObject]]
-private typealias RPThemeStringDict = [String:[String:String]]
+public typealias RPThemeDict = [String: [AnyHashable: AnyObject]]
+public typealias RPThemeStringDict = [String:[String:String]]
 
 /// Theme parser, can be used to configure the theme parameters. 
 open class Theme {
@@ -38,7 +38,7 @@ open class Theme {
     /// Italic font to be used by this theme
     open var italicCodeFont : RPFont!
     
-    private var themeDict : RPThemeDict!
+    public var themeDict : RPThemeDict!
     private var strippedTheme : RPThemeStringDict!
     
     /// Default background color for the current theme.
@@ -49,7 +49,7 @@ open class Theme {
      
      - parameter themeString: Theme to use.
      */
-    init(themeString: String)
+    public init(themeString: String)
     {
         theme = themeString
         setCodeFont(RPFont(name: "Courier", size: 14)!)
